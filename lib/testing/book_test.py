@@ -28,6 +28,6 @@ class TestBook:
         book = Book("The World According to Garp", 69)
         captured_out = io.StringIO()
         sys.stdout = captured_out
+        sys.stdout = captured_out
         book.turn_page()
-        sys.stdout = sys.__stdout__
         assert(captured_out.getvalue() == "Flipping the page...wow, you read fast!\n")
